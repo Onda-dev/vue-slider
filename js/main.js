@@ -37,8 +37,24 @@ const app = new Vue({
         ]
     },
     methods: {
+        previousImage() {
+            if(this.index === 0) {
+                this.index = this.images.length - 1
+                console.log(this.index)
+            } else {
+                this.index = this.index - 1
+                console.log(this.index)
+            }
+            
+        },
+
         nextImage() {
-            this.index = this.index + 1
+            if(this.index === this.images.length - 1) {
+                this.index = 0
+            } else {
+                this.index = this.index + 1
+                console.log(this.index)
+            }
         }
     }
 })
