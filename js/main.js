@@ -7,6 +7,7 @@
 const app = new Vue({
     el: "#root",
     data: {
+        index: 0,
         images: [
             {
                 src: 'img/01.jpg',
@@ -32,7 +33,13 @@ const app = new Vue({
                 src: 'img/05.jpg',
                 title: 'Paradise',
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-            },
+            }
         ]
+    },
+    methods: {
+        nextImage() {
+            this.index = this.index + 1
+        }
     }
 })
+
